@@ -1,0 +1,46 @@
+//dark theme
+$dark-accent: rgb(239,159,40);
+$dark-text: rgb(235, 232, 232); 
+$color-text-two: rgb(206, 166, 107);
+$dark-bg: #111110;
+$dark-bg-two: #1D1D1B;
+$dark-hover: rgb(239,159,40);
+
+//light theme
+$light-bg: #FAFAF8;
+$light-bg-two: #F0EFE8;
+$light-text:#D0D1CE;
+$light-text-two: #BA7517;
+$light-accent: #BA7517;
+$light-hover: #FAEEDA;
+
+:root{
+    --padding-inline: 2rem;
+   
+}
+
+
+
+:root, [dark-theme ="dark"] {
+    --color-bg: #{$dark-bg};
+    --color-bg-two:  #{$dark-bg-two};
+    --color-accent: #{$dark-accent};
+    --color-accent-hover: #{$dark-hover};
+    --color-text: #{$dark-text};
+    --color-text-two: #{$color-text-two};
+    
+}
+
+:root, [light-theme = "light"]{
+    --color-bg: #{$light-bg};
+    --color-bg-two: #{$light-bg-two};
+    --color-text: #{$light-text};
+    --color-text-two : #{$light-text-two};
+    --color-accent: #{$light-accent};
+    --color-accent-hover: #{$light-hover};
+}
+
+
+
+
+

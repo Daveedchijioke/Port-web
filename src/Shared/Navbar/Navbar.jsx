@@ -16,29 +16,33 @@ function Navbar({theme, toggleTheme}){
         <nav className='navbar'>
             <div className='navbar__logo'>DC.</div>
 
-            {/*Desktop links and mobile links */}
-            <ul className= {`navbar__links ${isOpen ? "navbar__links--open" : ""}`}>
-                {links.map((items, index)=>{
-                    return <li key={index} className='navbar__item'><a href="" className='navbar__link'>{items}</a></li>
-                })}
-            </ul>
-               
-            {/* Right side controls */}
-            <div className='navbar__controls'>
+            <div className='navbar__div'>
 
-              <button className='navbar__theme-toggle' onClick={toggleTheme}> 
-                {theme === "dark" ? <FaSun /> : <FaMoon />}   
-              </button>
+                {/*Desktop links and mobile links */}
+                <ul className= {`navbar__links ${isOpen ? "navbar__links--open" : ""}`}>
+                    {links.map((items, index)=>{
+                        return <li key={index} className='navbar__item'><a href="" className='navbar__link'>{items}</a></li>
+                    })}
+                </ul>
+                
+                {/* Right side controls */}
+                <div className='navbar__controls'>
 
-              <button className={`navbar__hamburger ${isOpen ? "open" : ""}`} onClick={()=> setIsOpen(!isOpen)}>
+                <button className='navbar__theme-toggle' onClick={toggleTheme}> 
+                    {theme === "dark" ? <FaSun className='sun-icon'/> : <FaMoon className='moon-icon'/>}   
+                </button>
 
-                <span></span>
-                <span></span>
-                <span></span>
+                <button className={`navbar__hamburger ${isOpen ? "open" : ""}`} onClick={()=> setIsOpen(!isOpen)}>
 
-              </button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
+                </button>
+
+                </div>
             </div>
+
 
             
 
